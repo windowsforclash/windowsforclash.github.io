@@ -6,8 +6,8 @@ layout: default
     {% include breadcrumb.html %}
     
     <div class="home-layout">
-        <!-- Hero Section -->
-        <section class="hero-section">
+        <!-- Compact Hero Section -->
+        <section class="hero-section-compact">
             <div class="hero-content">
                 <h1 class="hero-title">{{ site.title }}</h1>
                 <p class="hero-subtitle">{{ site.description }}</p>
@@ -16,50 +16,77 @@ layout: default
 
         <!-- Main Content -->
         <div class="home-main">
-            <!-- Featured Posts -->
-            {% assign featured_posts = site.posts | where: "featured", true | slice: 0, 3 %}
-            {% if featured_posts.size > 0 %}
-            <section class="featured-section">
-                <h2 class="section-title">Featured Articles</h2>
-                <div class="featured-posts">
-                    {% for post in featured_posts %}
-                    <article class="featured-post-card">
+            <!-- Latest Posts - Full Width -->
+            <section class="latest-section">
+                <h2 class="section-title">Latest Articles</h2>
+                <div class="posts-list">
+                    {% for post in site.posts limit:10 %}
+                    <article class="post-list-item">
                         {% if post.image %}
-                        <div class="post-image">
-                            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+                        <div class="post-list-image">
+                            <a href="{{ post.url | relative_url }}">
+                                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+                            </a>
+                        </div>
+                        {% else %}
+                        <div class="post-list-image placeholder">
+                            <a href="{{ post.url | relative_url }}">
+                                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="300" height="200" fill="#e0e0e0"/>
+                                    <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#999" font-size="18">No Image</text>
+                                </svg>
+                            </a>
                         </div>
                         {% endif %}
-                        <div class="post-content">
-                            <h3 class="post-title">
+                        
+                        <div class="post-list-content">
+                            {% if post.categories %}
+                            <div class="post-categories">
+                                {% for category in post.categories %}
+                                <a href="{{ '/category/' | relative_url }}{{ category | slugify }}/" class="category-badge">{{ category }}</a>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            
+                            <h3 class="post-list-title">
                                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                             </h3>
-                            <p class="post-excerpt">{{ post.description | truncate: 150 }}</p>
-                            <div class="post-meta">
-                                <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-                                {% if post.categories %}
-                                <span class="post-category">
-                                    {% for category in post.categories %}
-                                    <a href="{{ '/category/' | relative_url }}{{ category | slugify }}/">{{ category }}</a>
-                                    {% endfor %}
-                                </span>
+                            
+                            <p class="post-list-excerpt">{{ post.description | truncate: 200 }}</p>
+                            
+                            <div class="post-list-meta">
+                                <span class="post-list-date">{{ post.date | date: "%b %d, %Y" }}</span>
+                                {% if post.read_time %}
+                                <span class="post-list-read-time">{{ post.read_time }} min read</span>
                                 {% endif %}
+                                <a href="{{ post.url | relative_url }}" class="post-list-link">Read More →</a>
                             </div>
                         </div>
                     </article>
                     {% endfor %}
                 </div>
             </section>
-            {% endif %}
 
-            <!-- Latest Posts -->
-            <section class="latest-section">
-                <h2 class="section-title">Latest News</h2>
-                <div class="posts-grid">
-                    {% for post in site.posts limit:6 %}
-                    {% include post-card.html post=post %}
-                    {% endfor %}
-                </div>
-            </section>
+            <!-- Pagination -->
+            {% if paginator.total_pages > 1 %}
+            <div class="pagination">
+                {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">← Previous</a>
+                {% endif %}
+                
+                {% for page in (1..paginator.total_pages) %}
+                    {% if page == paginator.page %}
+                        <span class="page-number current">{{ page }}</span>
+                    {% else %}
+                        <a href="{% if page == 1 %}{{ '/' | relative_url }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}" class="page-number">{{ page }}</a>
+                    {% endif %}
+                {% endfor %}
+                
+                {% if paginator.next_page %}
+                    <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next →</a>
+                {% endif %}
+            </div>
+            {% endif %}
 
             <!-- Categories Section -->
             <section class="categories-section">

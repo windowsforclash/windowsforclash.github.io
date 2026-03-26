@@ -193,14 +193,33 @@ a:hover {
     text-align: center;
 }
 
+.hero-section-compact {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
 .hero-title {
     font-size: 48px;
     margin-bottom: 15px;
 }
 
+.hero-section-compact .hero-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
 .hero-subtitle {
     font-size: 20px;
     opacity: 0.9;
+}
+
+.hero-section-compact .hero-subtitle {
+    font-size: 16px;
+    opacity: 0.95;
 }
 
 .home-layout {
@@ -222,6 +241,142 @@ a:hover {
     border-bottom: 3px solid var(--primary-color);
     padding-bottom: 10px;
     display: inline-block;
+}
+
+/* Posts List */
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.post-list-item {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 25px;
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-list-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.post-list-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #e0e0e0;
+}
+
+.post-list-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.post-list-item:hover .post-list-image img {
+    transform: scale(1.05);
+}
+
+.post-list-image.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-list-image svg {
+    width: 100%;
+    height: 100%;
+}
+
+.post-list-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.post-list-title {
+    font-size: 22px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.post-list-title a {
+    color: var(--text-color);
+}
+
+.post-list-title a:hover {
+    color: var(--primary-color);
+}
+
+.post-list-excerpt {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-list-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 8px;
+}
+
+.post-list-date {
+    display: flex;
+    align-items: center;
+}
+
+.post-list-read-time {
+    display: flex;
+    align-items: center;
+}
+
+.post-list-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-left: auto;
+    transition: color 0.3s ease;
+}
+
+.post-list-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 768px) {
+    .post-list-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-list-image {
+        height: 200px;
+    }
+    
+    .post-list-meta {
+        flex-wrap: wrap;
+    }
+    
+    .post-list-link {
+        margin-left: 0;
+        margin-top: 5px;
+    }
 }
 
 /* Featured Posts */
@@ -930,9 +1085,52 @@ a:hover {
    ============================================================ */
 
 .pagination {
-    margin: 40px 0;
+    margin: 50px 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.page-number {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.page-number:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.page-number.current {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+.pagination .prev,
+.pagination .next {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.pagination .prev:hover,
+.pagination .next:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
 }
 
 .pagination-list {
