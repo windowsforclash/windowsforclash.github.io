@@ -1,9 +1,5 @@
-<!-- ================== SEO TDK ================== -->
-<title>Shadowrocket Windows版_小火箭节点订阅_Clash for Windows免费节点</title>
 <meta name="keywords" content="shadowrocket windows,shadowrocket windows版,小火箭windows版,小火箭节点,shadowrocket节点,clash for windows,clash免费节点,节点订阅,机场推荐">
 <meta name="description" content="提供Shadowrocket Windows版教程、小火箭节点订阅、Clash for Windows免费节点，每日更新高速稳定节点与机场推荐。">
-
-<!-- ================== Open Graph ================== -->
 <meta property="og:title" content="Shadowrocket Windows版 | 小火箭节点订阅">
 <meta property="og:description" content="小火箭节点、Clash for Windows免费节点每日更新">
 <meta property="og:url" content="https://windowsforclash.github.io/">
