@@ -4,7 +4,7 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap
-Sitemap: https://kuailianv-p-n.github.io/sitemap.xml
+Sitemap: https://windowsforclash.github.io/sitemap.xml
 
 # IndexNow key file
-# https://kuailianv-p-n.github.io/YOUR_API_KEY.txt
+# https://windowsforclash.github.io/YOUR_API_KEY.txt
