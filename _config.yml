@@ -1,7 +1,7 @@
 # Site settings
-title: "NewsHub - Breaking News & Analysis"
-description: "Your trusted source for breaking news, in-depth analysis, and expert commentary on technology, business, and world events."
-keywords: "news, technology, business, analysis, breaking news"
+title: "Shadowrocket Windows | 小火箭节点 | Clash for Windows 免费节点"
+description: "提供 Shadowrocket Windows 版下载、小火箭节点订阅、Clash for Windows 免费节点，以及详细的配置教程和机场推荐。"
+keywords: "shadowrockets windows, shadowrocket windows版, 小火箭windows版, 小火箭节点, shadowrocket节点, clash for windows, clash for windows免费节点, shadowrocket windows怎么下载, 小火箭windows版下载教程, shadowrocket节点免费分享, 小火箭节点订阅链接2026, clash for windows免费节点每日更新, 小火箭节点哪里买最便宜, shadowrocket节点购买推荐, 小火箭节点推荐稳定高速, shadowrocket节点订阅哪个好, 小火箭机场推荐2026, clash for windows机场推荐, 支持小火箭的机场有哪些, 最稳定的小火箭节点购买, shadowrocket windows怎么用, 小火箭windows怎么配置节点, shadowrocket节点怎么导入, clash for windows怎么添加订阅, 小火箭节点失效怎么解决, shadowrocket有windows版吗, 小火箭节点为什么用不了, clash for windows免费节点安全吗, 为什么小火箭节点速度慢"
 author: "NewsHub Editorial Team"
 author_bio: "A team of passionate journalists and analysts dedicated to delivering accurate, timely, and insightful news coverage."
 logo: "/assets/images/default-og.png"
@@ -25,7 +25,7 @@ social:
 
 # IndexNow
 indexnow:
-  key: "YOUR_INDEXNOW_API_KEY"
+  key: "d8715e2e84574aa785a5ad5aea7c4b0d"
   host: "windowsforclash.github.io"
 
 # Build settings

@@ -25,7 +25,7 @@ jobs:
       - name: Submit to IndexNow
         env:
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
-          SITE_HOST: kuailianv-p-n.github.io
+          SITE_HOST: windowsforclash.github.io
         run: |
           python3 << 'EOF'
           import os
