@@ -1,5 +1,3 @@
-<!-- SEO TDK -->
-<title>Shadowrocket Windows版是真的吗？小火箭节点与Clash for Windows完整指南</title>
 <meta name="keywords" content="shadowrocket windows,小火箭windows版,小火箭节点,shadowrocket节点,clash for windows免费节点,节点订阅,机场推荐">
 <meta name="description" content="解答Shadowrocket是否有Windows版，并提供小火箭节点订阅、Clash for Windows免费节点及机场推荐完整指南。">
 
