@@ -1,10 +1,10 @@
 # Site settings
 title: "NewsHub - Breaking News & Analysis"
-description: "Your trusted source for breaking news, in-depth analysis, and expert commentary."
-keywords: "news, technology, business, analysis"
+description: "Your trusted source for breaking news, in-depth analysis, and expert commentary on technology, business, and world events."
+keywords: "news, technology, business, analysis, breaking news"
 author: "NewsHub Editorial Team"
 author_bio: "A team of passionate journalists and analysts dedicated to delivering accurate, timely, and insightful news coverage."
-logo: "/assets/images/logo.png"
+logo: "/assets/images/default-og.png"
 
 # Site URL (will be replaced per repo)
 url: "https://windowsforclash.github.io"

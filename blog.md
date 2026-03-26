@@ -1,9 +1,12 @@
 ---
 layout: default
 title: Blog
+paginate: true
 ---
 
 <div class="container">
+  {% include breadcrumb.html %}
+  
   <div class="archive-layout">
     <header class="archive-header">
       <h1 class="archive-title">Latest Articles</h1>

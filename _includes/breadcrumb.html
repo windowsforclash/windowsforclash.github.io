@@ -1,25 +1,33 @@
 <nav class="breadcrumb" aria-label="Breadcrumb">
-  <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
-    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a href="{{ '/' | relative_url }}" itemprop="item"><span itemprop="name">Home</span></a>
-      <meta itemprop="position" content="1">
-    </li>
-    {% if page.categories %}
-    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a href="{{ '/category/' | append: page.categories[0] | slugify | relative_url }}" itemprop="item">
-        <span itemprop="name">{{ page.categories[0] | capitalize }}</span>
-      </a>
-      <meta itemprop="position" content="2">
-    </li>
-    <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <span itemprop="name">{{ page.title }}</span>
-      <meta itemprop="position" content="3">
-    </li>
-    {% else %}
-    <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <span itemprop="name">{{ page.title }}</span>
-      <meta itemprop="position" content="2">
-    </li>
-    {% endif %}
-  </ol>
+    <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+            <a href="{{ '/' | relative_url }}">Home</a>
+        </li>
+        
+        {% if page.layout == 'post' %}
+            {% if page.categories %}
+                {% for category in page.categories %}
+                <li class="breadcrumb-item">
+                    <a href="{{ '/category/' | relative_url }}{{ category | slugify }}/">{{ category | capitalize }}</a>
+                </li>
+                {% endfor %}
+            {% endif %}
+            <li class="breadcrumb-item active">{{ page.title }}</li>
+        
+        {% elsif page.layout == 'category' %}
+            <li class="breadcrumb-item active">Category: {{ page.category | capitalize }}</li>
+        
+        {% elsif page.layout == 'tag' %}
+            <li class="breadcrumb-item active">Tag: {{ page.tag }}</li>
+        
+        {% elsif page.url contains '/blog' %}
+            <li class="breadcrumb-item active">Blog</li>
+        
+        {% elsif page.url contains '/about' %}
+            <li class="breadcrumb-item active">About</li>
+        
+        {% else %}
+            <li class="breadcrumb-item active">{{ page.title }}</li>
+        {% endif %}
+    </ol>
 </nav>
