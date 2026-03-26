@@ -184,6 +184,189 @@ a:hover {
    HOME PAGE
    ============================================================ */
 
+/* --- Site Banner (replaces hero-section) --- */
+.site-banner {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 28px;
+}
+
+.site-banner-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.site-banner-title {
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.site-banner-sep {
+    opacity: 0.6;
+    font-size: 16px;
+}
+
+.site-banner-desc {
+    opacity: 0.92;
+    font-size: 13px;
+}
+
+/* --- Post Cards Grid (new layout) --- */
+.post-cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-card-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.post-card-item:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.post-card-thumb-link {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    min-height: 140px;
+}
+
+.post-card-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.post-card-item:hover .post-card-thumb {
+    transform: scale(1.04);
+}
+
+.post-card-thumb-placeholder {
+    background: #e8edf2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-card-thumb-placeholder svg {
+    width: 100%;
+    height: 100%;
+}
+
+.post-card-body {
+    padding: 16px 18px 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.post-card-cats {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.cat-tag {
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.cat-tag:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.post-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.post-card-title a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.post-card-title a:hover {
+    color: var(--primary-color);
+}
+
+.post-card-excerpt {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.65;
+    margin: 0;
+    flex: 1;
+}
+
+.post-card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.post-card-date {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.post-card-readmore {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.post-card-readmore:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 640px) {
+    .post-card-item {
+        grid-template-columns: 1fr;
+    }
+    .post-card-thumb-link {
+        min-height: 180px;
+        max-height: 200px;
+    }
+    .post-card-body {
+        padding: 14px;
+    }
+    .site-banner-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
 .hero-section {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;

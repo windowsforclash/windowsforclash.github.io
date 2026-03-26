@@ -4,62 +4,59 @@ layout: default
 
 <div class="container">
     {% include breadcrumb.html %}
-    
-    <div class="home-layout">
-        <!-- Compact Hero Section -->
-        <section class="hero-section-compact">
-            <div class="hero-content">
-                <h1 class="hero-title">{{ site.title }}</h1>
-                <p class="hero-subtitle">{{ site.description }}</p>
-            </div>
-        </section>
 
+    <!-- Slim Banner -->
+    <div class="site-banner">
+        <div class="site-banner-inner">
+            <span class="site-banner-title">{{ site.title }}</span>
+            <span class="site-banner-sep">·</span>
+            <span class="site-banner-desc">{{ site.description | truncate: 60 }}</span>
+        </div>
+    </div>
+
+    <div class="home-layout">
         <!-- Main Content -->
         <div class="home-main">
-            <!-- Latest Posts - Full Width -->
+            <!-- Latest Posts -->
             <section class="latest-section">
-                <h2 class="section-title">Latest Articles</h2>
-                <div class="posts-list">
+                <h2 class="section-title">最新文章</h2>
+                <div class="post-cards-grid">
                     {% for post in site.posts limit:10 %}
-                    <article class="post-list-item">
-                        {% if post.image %}
-                        <div class="post-list-image">
-                            <a href="{{ post.url | relative_url }}">
-                                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
-                            </a>
-                        </div>
-                        {% else %}
-                        <div class="post-list-image placeholder">
-                            <a href="{{ post.url | relative_url }}">
-                                <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="300" height="200" fill="#e0e0e0"/>
-                                    <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#999" font-size="18">No Image</text>
+                    <article class="post-card-item">
+                        <a href="{{ post.url | relative_url }}" class="post-card-thumb-link">
+                            {% if post.image %}
+                            <img class="post-card-thumb" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+                            {% else %}
+                            <div class="post-card-thumb post-card-thumb-placeholder">
+                                <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="200" fill="#e8edf2"/>
+                                    <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#aab4be" font-size="16" font-family="sans-serif">No Image</text>
                                 </svg>
-                            </a>
-                        </div>
-                        {% endif %}
-                        
-                        <div class="post-list-content">
+                            </div>
+                            {% endif %}
+                        </a>
+                        <div class="post-card-body">
                             {% if post.categories %}
-                            <div class="post-categories">
-                                {% for category in post.categories %}
-                                <a href="{{ '/category/' | relative_url }}{{ category | slugify }}/" class="category-badge">{{ category }}</a>
+                            <div class="post-card-cats">
+                                {% for cat in post.categories limit:2 %}
+                                <a href="{{ '/category/' | relative_url }}{{ cat | slugify }}/" class="cat-tag">{{ cat }}</a>
                                 {% endfor %}
                             </div>
                             {% endif %}
-                            
-                            <h3 class="post-list-title">
+
+                            <h3 class="post-card-title">
                                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                             </h3>
-                            
-                            <p class="post-list-excerpt">{{ post.description | truncate: 200 }}</p>
-                            
-                            <div class="post-list-meta">
-                                <span class="post-list-date">{{ post.date | date: "%b %d, %Y" }}</span>
-                                {% if post.read_time %}
-                                <span class="post-list-read-time">{{ post.read_time }} min read</span>
-                                {% endif %}
-                                <a href="{{ post.url | relative_url }}" class="post-list-link">Read More →</a>
+
+                            {% if post.description %}
+                            <p class="post-card-excerpt">{{ post.description | truncate: 160 }}</p>
+                            {% elsif post.excerpt %}
+                            <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                            {% endif %}
+
+                            <div class="post-card-foot">
+                                <time class="post-card-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+                                <a href="{{ post.url | relative_url }}" class="post-card-readmore">阅读全文 →</a>
                             </div>
                         </div>
                     </article>
@@ -71,9 +68,8 @@ layout: default
             {% if paginator.total_pages > 1 %}
             <div class="pagination">
                 {% if paginator.previous_page %}
-                    <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">← Previous</a>
+                    <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">← 上一页</a>
                 {% endif %}
-                
                 {% for page in (1..paginator.total_pages) %}
                     {% if page == paginator.page %}
                         <span class="page-number current">{{ page }}</span>
@@ -81,36 +77,33 @@ layout: default
                         <a href="{% if page == 1 %}{{ '/' | relative_url }}{% else %}{{ site.paginate_path | relative_url | replace: ':num', page }}{% endif %}" class="page-number">{{ page }}</a>
                     {% endif %}
                 {% endfor %}
-                
                 {% if paginator.next_page %}
-                    <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next →</a>
+                    <a href="{{ paginator.next_page_path | relative_url }}" class="next">下一页 →</a>
                 {% endif %}
             </div>
             {% endif %}
 
-            <!-- Categories Section -->
+            <!-- Categories -->
+            {% if site.categories.size > 0 %}
             <section class="categories-section">
-                <h2 class="section-title">Browse by Category</h2>
+                <h2 class="section-title">文章分类</h2>
                 <div class="categories-grid">
                     {% for category in site.categories %}
                     <div class="category-card">
                         <h3 class="category-name">
-                            <a href="{{ '/category/' | relative_url }}{{ category[0] | slugify }}/">
-                                {{ category[0] | capitalize }}
-                            </a>
+                            <a href="{{ '/category/' | relative_url }}{{ category[0] | slugify }}/">{{ category[0] }}</a>
                         </h3>
-                        <p class="category-count">{{ category[1].size }} articles</p>
+                        <p class="category-count">{{ category[1].size }} 篇文章</p>
                         <ul class="category-posts">
                             {% for post in category[1] limit:3 %}
-                            <li>
-                                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                            </li>
+                            <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
                     {% endfor %}
                 </div>
             </section>
+            {% endif %}
         </div>
 
         <!-- Sidebar -->
