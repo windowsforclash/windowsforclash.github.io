@@ -1,0 +1,92 @@
+name: IndexNow Push
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '_posts/**'
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get changed posts
+        id: changed_posts
+        run: |
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- '_posts/' | head -20)
+          echo "changed_files=$CHANGED" >> $GITHUB_OUTPUT
+
+      - name: Submit to IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          SITE_HOST: kuailianv-p-n.github.io
+        run: |
+          python3 << 'EOF'
+          import os
+          import re
+          import json
+          import urllib.request
+          import urllib.error
+
+          key = os.environ.get('INDEXNOW_KEY', '')
+          host = os.environ.get('SITE_HOST', 'kuailianv-p-n.github.io')
+          changed = os.environ.get('CHANGED_FILES', '')
+
+          if not key:
+              print("No IndexNow key configured. Set INDEXNOW_KEY secret.")
+              exit(0)
+
+          # Parse post filenames to URLs
+          urls = []
+          for line in changed.split('\n'):
+              line = line.strip()
+              if not line or not line.startswith('_posts/'):
+                  continue
+              # Extract date and slug from filename: _posts/YYYY-MM-DD-slug.md
+              match = re.match(r'_posts/(\d{4})-(\d{2})-(\d{2})-(.+)\.md', line)
+              if match:
+                  slug = match.group(4)
+                  url = f"https://{host}/{slug}/"
+                  urls.append(url)
+
+          if not urls:
+              print("No new post URLs to submit.")
+              exit(0)
+
+          print(f"Submitting {len(urls)} URL(s) to IndexNow...")
+
+          payload = {
+              "host": host,
+              "key": key,
+              "keyLocation": f"https://{host}/{key}.txt",
+              "urlList": urls
+          }
+
+          data = json.dumps(payload).encode('utf-8')
+          req = urllib.request.Request(
+              'https://api.indexnow.org/indexnow',
+              data=data,
+              headers={'Content-Type': 'application/json; charset=utf-8'},
+              method='POST'
+          )
+
+          try:
+              with urllib.request.urlopen(req) as response:
+                  print(f"IndexNow response: {response.status}")
+                  for url in urls:
+                      print(f"  Submitted: {url}")
+          except urllib.error.HTTPError as e:
+              print(f"HTTP Error: {e.code} {e.reason}")
+              body = e.read().decode('utf-8', errors='replace')
+              print(f"Response body: {body}")
+          except Exception as e:
+              print(f"Error: {e}")
+          EOF
+        env:
+          CHANGED_FILES: ${{ steps.changed_posts.outputs.changed_files }}

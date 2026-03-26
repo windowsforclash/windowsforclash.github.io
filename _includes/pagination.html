@@ -1,0 +1,50 @@
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Pagination">
+  <ul class="pagination-list">
+    {% if paginator.previous_page %}
+    <li class="pagination-item">
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link pagination-prev" aria-label="Previous page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Previous
+      </a>
+    </li>
+    {% else %}
+    <li class="pagination-item disabled">
+      <span class="pagination-link pagination-prev" aria-disabled="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Previous
+      </span>
+    </li>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+    <li class="pagination-item">
+      {% if page == paginator.page %}
+      <span class="pagination-link active" aria-current="page">{{ page }}</span>
+      {% elsif page == 1 %}
+      <a href="{{ '/blog/' | relative_url }}" class="pagination-link">{{ page }}</a>
+      {% else %}
+      <a href="{{ site.paginate_path | replace: ':num', page | relative_url }}" class="pagination-link">{{ page }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <li class="pagination-item">
+      <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link pagination-next" aria-label="Next page">
+        Next
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+    </li>
+    {% else %}
+    <li class="pagination-item disabled">
+      <span class="pagination-link pagination-next" aria-disabled="true">
+        Next
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </span>
+    </li>
+    {% endif %}
+  </ul>
+  <p class="pagination-info">Page {{ paginator.page }} of {{ paginator.total_pages }}</p>
+</nav>
+{% endif %}

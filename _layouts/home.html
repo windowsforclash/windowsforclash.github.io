@@ -1,0 +1,101 @@
+---
+layout: default
+---
+
+<!-- Hero / Featured Posts -->
+<section class="hero-section" aria-label="Featured articles">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Main Featured Post -->
+      {% assign featured = site.posts | where: "featured", true | first %}
+      {% unless featured %}{% assign featured = site.posts.first %}{% endunless %}
+      {% if featured %}
+      <article class="hero-main" itemscope itemtype="https://schema.org/NewsArticle">
+        {% if featured.image %}
+        <a href="{{ featured.url | relative_url }}" class="hero-image-link">
+          <img src="{{ featured.image | relative_url }}" alt="{{ featured.title }}" width="800" height="450" loading="eager" fetchpriority="high" itemprop="image">
+        </a>
+        {% endif %}
+        <div class="hero-content">
+          {% if featured.categories %}
+          <a href="{{ '/category/' | append: featured.categories[0] | slugify | relative_url }}" class="category-badge featured-badge">{{ featured.categories[0] | capitalize }}</a>
+          {% endif %}
+          <h1 itemprop="headline"><a href="{{ featured.url | relative_url }}" itemprop="url">{{ featured.title }}</a></h1>
+          <p itemprop="description">{{ featured.description | default: featured.excerpt | strip_html | truncatewords: 30 }}</p>
+          <div class="hero-meta">
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <span itemprop="name">{{ featured.author | default: site.author }}</span>
+            </span>
+            <time datetime="{{ featured.date | date_to_xmlschema }}" itemprop="datePublished">{{ featured.date | date: "%B %d, %Y" }}</time>
+          </div>
+        </div>
+      </article>
+      {% endif %}
+
+      <!-- Secondary Featured Posts -->
+      <div class="hero-secondary">
+        {% assign secondary_posts = site.posts | where: "featured", true %}
+        {% if secondary_posts.size < 2 %}{% assign secondary_posts = site.posts %}{% endif %}
+        {% for post in secondary_posts limit:3 offset:1 %}
+        <article class="hero-secondary-card" itemscope itemtype="https://schema.org/NewsArticle">
+          {% if post.image %}
+          <a href="{{ post.url | relative_url }}" class="secondary-image-link">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" width="300" height="180" loading="lazy" itemprop="image">
+          </a>
+          {% endif %}
+          <div class="secondary-content">
+            {% if post.categories %}
+            <a href="{{ '/category/' | append: post.categories[0] | slugify | relative_url }}" class="category-badge">{{ post.categories[0] | capitalize }}</a>
+            {% endif %}
+            <h2 itemprop="headline"><a href="{{ post.url | relative_url }}" itemprop="url">{{ post.title }}</a></h2>
+            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Latest News Section -->
+<section class="latest-news" aria-label="Latest news">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Latest News</h2>
+      <a href="{{ '/blog/' | relative_url }}" class="view-all">View All <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+    </div>
+    <div class="posts-grid">
+      {% for post in site.posts limit:6 %}
+      {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+    {% include pagination.html %}
+  </div>
+</section>
+
+<!-- Category Blocks -->
+<section class="category-blocks" aria-label="Browse by category">
+  <div class="container">
+    <h2 class="section-title">Browse by Category</h2>
+    <div class="category-grid">
+      {% for category in site.categories limit:3 %}
+      <div class="category-block">
+        <div class="category-block-header">
+          <h3><a href="{{ '/category/' | append: category[0] | slugify | relative_url }}">{{ category[0] | capitalize }}</a></h3>
+          <a href="{{ '/category/' | append: category[0] | slugify | relative_url }}" class="view-all-small">More</a>
+        </div>
+        <ul class="category-post-list">
+          {% for post in category[1] limit:4 %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ content }}

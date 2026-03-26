@@ -1,0 +1,64 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- About Column -->
+      <div class="footer-col footer-about">
+        <h3 class="footer-heading">{{ site.title }}</h3>
+        <p>{{ site.description }}</p>
+        <div class="footer-social">
+          {% for social in site.social %}
+          <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.name }}">
+            {{ social.name }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Categories Column -->
+      <div class="footer-col footer-categories">
+        <h3 class="footer-heading">Categories</h3>
+        <ul>
+          {% for category in site.categories limit:8 %}
+          <li><a href="{{ '/category/' | append: category[0] | slugify | relative_url }}">{{ category[0] | capitalize }} <span class="count">({{ category[1].size }})</span></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Recent Posts Column -->
+      <div class="footer-col footer-recent">
+        <h3 class="footer-heading">Recent Posts</h3>
+        <ul>
+          {% for post in site.posts limit:5 %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%b %d, %Y" }}</time>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Tags Column -->
+      <div class="footer-col footer-tags">
+        <h3 class="footer-heading">Popular Tags</h3>
+        <div class="tag-cloud">
+          {% for tag in site.tags limit:20 %}
+          <a href="{{ '/tag/' | append: tag[0] | slugify | relative_url }}" class="tag">{{ tag[0] }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>
+        <a href="{{ '/terms/' | relative_url }}">Terms of Use</a>
+        <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS Feed</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Main JS -->
+<script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>

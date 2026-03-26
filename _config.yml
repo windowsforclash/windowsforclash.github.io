@@ -1,0 +1,77 @@
+# Site settings
+title: "NewsHub - Breaking News & Analysis"
+description: "Your trusted source for breaking news, in-depth analysis, and expert commentary."
+keywords: "news, technology, business, analysis"
+author: "NewsHub Editorial Team"
+author_bio: "A team of passionate journalists and analysts dedicated to delivering accurate, timely, and insightful news coverage."
+logo: "/assets/images/logo.png"
+
+# Site URL (will be replaced per repo)
+url: "https://windowsforclash.github.io"
+baseurl: ""
+lang: "en"
+
+# Social media
+twitter_username: "newshub"
+social:
+  - name: Twitter
+    url: "https://twitter.com/newshub"
+  - name: Facebook
+    url: "https://facebook.com/newshub"
+  - name: Telegram
+    url: "https://t.me/newshub"
+  - name: Reddit
+    url: "https://reddit.com/r/newshub"
+
+# IndexNow
+indexnow:
+  key: "YOUR_INDEXNOW_API_KEY"
+  host: "windowsforclash.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+permalink: /:categories/:title/
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "NewsHub Editorial Team"
+      image: "/assets/images/default-og.png"
+      robots: "index, follow"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      robots: "index, follow"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .github/
+  - README.md
+  - "*.sh"
+  - "*.py"
+
+include:
+  - robots.txt
+  - sitemap.xml

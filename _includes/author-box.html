@@ -1,0 +1,15 @@
+<div class="author-box" itemscope itemtype="https://schema.org/Person">
+  <div class="author-avatar">
+    {% assign author_name = page.author | default: site.author %}
+    <img src="{{ '/assets/images/author-avatar.png' | relative_url }}" alt="{{ author_name }}" width="80" height="80" loading="lazy" itemprop="image">
+  </div>
+  <div class="author-info">
+    <h3 class="author-name" itemprop="name">{{ author_name }}</h3>
+    <p class="author-bio" itemprop="description">{{ site.author_bio | default: "A passionate writer and content creator sharing insights on technology, news, and more." }}</p>
+    <div class="author-social">
+      {% for social in site.social limit:3 %}
+      <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.name }}">{{ social.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

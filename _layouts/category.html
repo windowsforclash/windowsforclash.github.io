@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="archive-layout">
+    <header class="archive-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li class="breadcrumb-item active">{{ page.category | capitalize }}</li>
+        </ol>
+      </nav>
+      <h1 class="archive-title">{{ page.category | capitalize }}</h1>
+      {% if page.description %}
+      <p class="archive-description">{{ page.description }}</p>
+      {% endif %}
+      <p class="archive-count">
+        {% assign cat_posts = site.categories[page.category] %}
+        {{ cat_posts.size }} article{% if cat_posts.size != 1 %}s{% endif %} in this category
+      </p>
+    </header>
+
+    <div class="posts-grid">
+      {% assign cat_posts = site.categories[page.category] %}
+      {% for post in cat_posts %}
+      {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<!-- About Widget -->
+<div class="sidebar-widget widget-about">
+  <h3 class="widget-title">About</h3>
+  <div class="widget-content">
+    <p>{{ site.description }}</p>
+  </div>
+</div>
+
+<!-- Categories Widget -->
+<div class="sidebar-widget widget-categories">
+  <h3 class="widget-title">Categories</h3>
+  <ul class="widget-list">
+    {% for category in site.categories %}
+    <li>
+      <a href="{{ '/category/' | append: category[0] | slugify | relative_url }}">
+        {{ category[0] | capitalize }}
+        <span class="count">{{ category[1].size }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<!-- Recent Posts Widget -->
+<div class="sidebar-widget widget-recent">
+  <h3 class="widget-title">Recent Posts</h3>
+  <ul class="widget-recent-list">
+    {% for post in site.posts limit:5 %}
+    <li class="recent-post-item">
+      {% if post.image %}
+      <a href="{{ post.url | relative_url }}" class="recent-post-image">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" width="80" height="60" loading="lazy">
+      </a>
+      {% endif %}
+      <div class="recent-post-info">
+        <a href="{{ post.url | relative_url }}" class="recent-post-title">{{ post.title }}</a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<!-- Tags Widget -->
+<div class="sidebar-widget widget-tags">
+  <h3 class="widget-title">Tags</h3>
+  <div class="tag-cloud">
+    {% for tag in site.tags %}
+    <a href="{{ '/tag/' | append: tag[0] | slugify | relative_url }}" class="tag">{{ tag[0] }}</a>
+    {% endfor %}
+  </div>
+</div>

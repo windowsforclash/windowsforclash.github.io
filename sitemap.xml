@@ -1,0 +1,73 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Posts -->
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ post.url | absolute_url }}</loc>
+    <lastmod>{% if post.last_modified_at %}{{ post.last_modified_at | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    {% if post.image %}
+    <image:image>
+      <image:loc>{{ post.image | absolute_url }}</image:loc>
+      <image:title>{{ post.title | escape }}</image:title>
+    </image:image>
+    {% endif %}
+    <news:news>
+      <news:publication>
+        <news:name>{{ site.title | escape }}</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>{{ post.date | date_to_xmlschema }}</news:publication_date>
+      <news:title>{{ post.title | escape }}</news:title>
+    </news:news>
+  </url>
+  {% endfor %}
+
+  <!-- Pages -->
+  {% for page in site.pages %}
+  {% if page.sitemap != false and page.url != '/sitemap.xml' and page.url != '/feed.xml' %}
+  <url>
+    <loc>{{ page.url | absolute_url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endif %}
+  {% endfor %}
+
+  <!-- Categories -->
+  {% for category in site.categories %}
+  <url>
+    <loc>{{ site.url }}/category/{{ category[0] | slugify }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {% endfor %}
+
+  <!-- Tags -->
+  {% for tag in site.tags %}
+  <url>
+    <loc>{{ site.url }}/tag/{{ tag[0] | slugify }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  {% endfor %}
+
+</urlset>

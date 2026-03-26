@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="archive-layout">
+    <header class="archive-header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li class="breadcrumb-item active">Tag: {{ page.tag }}</li>
+        </ol>
+      </nav>
+      <h1 class="archive-title">#{{ page.tag }}</h1>
+      <p class="archive-count">
+        {% assign tag_posts = site.tags[page.tag] %}
+        {{ tag_posts.size }} article{% if tag_posts.size != 1 %}s{% endif %} with this tag
+      </p>
+    </header>
+
+    <div class="posts-grid">
+      {% assign tag_posts = site.tags[page.tag] %}
+      {% for post in tag_posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
