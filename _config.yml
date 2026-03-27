@@ -10,6 +10,8 @@ logo: "/assets/images/default-og.png"
 url: "https://windowsforclash.github.io"
 baseurl: ""
 lang: "en"
+timezone: Asia/Shanghai
+future: true
 
 # Social media
 twitter_username: "newshub"
