@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "Top 5 Sustainable Tech Innovations to Watch in 2026"
 description: "From green energy solutions to circular economy models, discover the sustainable technology innovations that are shaping a more environmentally friendly future."
 author: "Jane Doe"

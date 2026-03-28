@@ -8,7 +8,7 @@
             {% if page.categories %}
                 {% for category in page.categories %}
                 <li class="breadcrumb-item">
-                    <a href="{{ '/category/' | relative_url }}{{ category | slugify }}/">{{ category | capitalize }}</a>
+                    <a href="{{ '/category/' | relative_url }}{{ category }}/">{{ category | capitalize }}</a>
                 </li>
                 {% endfor %}
             {% endif %}

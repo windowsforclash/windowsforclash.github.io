@@ -1,9 +1,9 @@
 ---
 layout: post
+categories: [教程]
 title: "The Future of Artificial Intelligence: Key Trends for 2026 and Beyond"
 description: "Explore the most important AI trends shaping our world, from generative models and autonomous systems to ethical AI frameworks and the path toward AGI."
 author: "Alex Johnson"
-categories: [technology]
 tags: [artificial intelligence, machine learning, AI ethics, generative AI, AGI]
 image: "/assets/images/post-1.jpg"
 featured: true

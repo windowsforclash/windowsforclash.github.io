@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速掌握clash一元订阅激活教程并优化网络性能？"
 date: "2026-03-28 08:45:13 +08:00"
 permalink: /ruhekuaisuzhangwoclashyiyuandingyuejihuojiaochengbingyouhuawangluoxingneng/

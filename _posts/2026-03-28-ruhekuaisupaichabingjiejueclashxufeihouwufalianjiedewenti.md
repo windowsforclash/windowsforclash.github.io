@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速排查并解决 Clash 续费后无法连接的问题？"
 date: "2026-03-28 08:45:11 +08:00"
 permalink: /ruhekuaisupaichabingjiejueclashxufeihouwufalianjiedewenti/

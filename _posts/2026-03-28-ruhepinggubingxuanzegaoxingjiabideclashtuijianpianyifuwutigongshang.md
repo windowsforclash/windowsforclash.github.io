@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何评估并选择高性价比的Clash推荐便宜服务提供商？"
 date: "2026-03-28 08:40:49 +08:00"
 permalink: /ruhepinggubingxuanzegaoxingjiabideclashtuijianpianyifuwutigongshang/

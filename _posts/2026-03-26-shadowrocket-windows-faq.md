@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "Shadowrocket Windows 常见问题解答：节点失效与速度慢"
 description: "Shadowrocket Windows 用户常见问题解答，包括 Shadowrocket 有 Windows 版吗？小火箭节点为什么用不了？Clash for Windows 免费节点安全吗？以及为什么小火箭节点速度慢？"
 keywords: "shadowrocket有windows版吗, 小火箭节点为什么用不了, clash for windows免费节点安全吗, 为什么小火箭节点速度慢, shadowrocket windows版, 小火箭节点"

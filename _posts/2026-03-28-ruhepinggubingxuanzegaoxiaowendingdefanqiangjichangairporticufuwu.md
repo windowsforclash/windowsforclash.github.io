@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何评估并选择高效稳定的翻墙机场airporticu服务？"
 date: "2026-03-28 08:40:49 +08:00"
 permalink: /ruhepinggubingxuanzegaoxiaowendingdefanqiangjichangairporticufuwu/

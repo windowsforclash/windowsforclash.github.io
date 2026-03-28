@@ -1,9 +1,9 @@
 ---
 layout: post
+categories: [教程]
 title: "The Metaverse in 2026: Hype vs. Reality"
 description: "Two years after the initial surge of hype, where does the metaverse stand? We separate the marketing buzz from the tangible progress in virtual and augmented reality."
 author: "Emily Chen"
-categories: [technology]
 tags: [metaverse, virtual reality, augmented reality, web3, gaming]
 image: "/assets/images/post-4.jpg"
 ---

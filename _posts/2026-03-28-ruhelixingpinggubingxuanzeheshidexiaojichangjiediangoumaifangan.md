@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何理性评估并选择合适的小机场节点购买方案？"
 date: "2026-03-28 08:40:49 +08:00"
 permalink: /ruhelixingpinggubingxuanzeheshidexiaojichangjiediangoumaifangan/

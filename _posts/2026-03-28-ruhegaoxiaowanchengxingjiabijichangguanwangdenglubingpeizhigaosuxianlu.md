@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何高效完成性价比机场官网登录并配置高速线路？"
 date: "2026-03-28 08:40:50 +08:00"
 permalink: /ruhegaoxiaowanchengxingjiabijichangguanwangdenglubingpeizhigaosuxianlu/

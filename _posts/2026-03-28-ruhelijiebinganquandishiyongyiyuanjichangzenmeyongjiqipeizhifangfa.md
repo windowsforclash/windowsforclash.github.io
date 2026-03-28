@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何理解并安全地使用一元机场怎么用及其配置方法"
 date: "2026-03-28 08:45:11 +08:00"
 permalink: /ruhelijiebinganquandishiyongyiyuanjichangzenmeyongjiqipeizhifangfa/

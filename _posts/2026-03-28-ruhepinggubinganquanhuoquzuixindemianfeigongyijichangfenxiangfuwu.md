@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何评估并安全获取最新的免费公益机场分享服务？"
 date: "2026-03-28 08:40:50 +08:00"
 permalink: /ruhepinggubinganquanhuoquzuixindemianfeigongyijichangfenxiangfuwu/

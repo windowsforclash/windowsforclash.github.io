@@ -45,7 +45,7 @@ plugins:
   - jekyll-redirect-from
 
 permalink: /:categories/:title/
-paginate: 6
+paginate: 12
 paginate_path: "/blog/page:num/"
 
 defaults:

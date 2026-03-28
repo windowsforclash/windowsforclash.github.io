@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速理解并解决clash链接怎么导入的技术难题？"
 date: "2026-03-28 08:45:11 +08:00"
 permalink: /ruhekuaisulijiebingjiejueclashlianjiezenmedaorudejishunanti/

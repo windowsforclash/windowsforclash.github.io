@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "Navigating the New Era of Global Business"
 description: "Explore the key trends shaping the global business landscape in 2026, from supply chain resilience to the adoption of digital currencies and the impact of remote work."
 author: "John Smith"

@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速找到 Clash 语言设置在哪以及完成客户端通用配置"
 date: "2026-03-28 08:45:12 +08:00"
 permalink: /ruhekuaisuzhaodaoclashyuyanshezhizainayijiwanchengkehuduantongyongpeizhi/

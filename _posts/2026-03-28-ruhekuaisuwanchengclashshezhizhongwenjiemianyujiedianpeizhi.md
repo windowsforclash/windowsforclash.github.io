@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速完成Clash设置中文界面与节点配置？"
 date: "2026-03-28 08:45:12 +08:00"
 permalink: /ruhekuaisuwanchengclashshezhizhongwenjiemianyujiedianpeizhi/

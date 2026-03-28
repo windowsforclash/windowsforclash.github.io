@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "Shadowrocket Windows 怎么下载？小火箭 Windows 版下载教程"
 description: "Shadowrocket Windows 版下载教程，详细指导 Windows 用户如何获取和安装 Shadowrocket 替代方案，如 Clash for Windows。"
 keywords: "shadowrocket windows怎么下载, 小火箭windows版下载教程, shadowrocket节点免费分享, 小火箭节点订阅链接2026, clash for windows免费节点每日更新"

@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速处理免费订阅个月的iCloud怎么取消及网络配置难题？"
 date: "2026-03-28 08:45:11 +08:00"
 permalink: /ruhekuaisuchulimianfeidingyuegeyuedeicloudzenmequxiaojiwangluopeizhinanti/

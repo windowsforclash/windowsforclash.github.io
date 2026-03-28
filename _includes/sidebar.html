@@ -36,7 +36,7 @@
         <ul class="categories-list">
             {% for category in site.categories %}
             <li class="category-item">
-                <a href="{{ '/category/' | relative_url }}{{ category[0] | slugify }}/" class="category-link">
+                <a href="{{ '/category/' | relative_url }}{{ category[0] }}/" class="category-link">
                     {{ category[0] | capitalize }}
                     <span class="category-count">({{ category[1].size }})</span>
                 </a>

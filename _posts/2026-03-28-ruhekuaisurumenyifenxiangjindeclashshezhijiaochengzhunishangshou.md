@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速入门？一份详尽的Clash设置教程助你上手"
 date: "2026-03-28 08:45:11 +08:00"
 permalink: /ruhekuaisurumenyifenxiangjindeclashshezhijiaochengzhunishangshou/

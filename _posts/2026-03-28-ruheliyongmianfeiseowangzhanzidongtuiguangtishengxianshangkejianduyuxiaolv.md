@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何利用免费SEO网站自动推广提升线上可见度与效率？"
 date: "2026-03-28 08:40:51 +08:00"
 permalink: /ruheliyongmianfeiseowangzhanzidongtuiguangtishengxianshangkejianduyuxiaolv/

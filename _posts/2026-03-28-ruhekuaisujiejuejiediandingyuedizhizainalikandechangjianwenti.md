@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速解决“节点订阅地址在哪里看”的常见问题"
 date: "2026-03-28 08:45:12 +08:00"
 permalink: /ruhekuaisujiejuejiediandingyuedizhizainalikandechangjianwenti/

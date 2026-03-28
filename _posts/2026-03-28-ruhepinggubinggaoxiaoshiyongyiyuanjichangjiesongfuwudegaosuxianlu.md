@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何评估并高效使用一元机场接送服务的高速线路？"
 date: "2026-03-28 08:40:49 +08:00"
 permalink: /ruhepinggubinggaoxiaoshiyongyiyuanjichangjiesongfuwudegaosuxianlu/

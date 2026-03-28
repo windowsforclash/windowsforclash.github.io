@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速完成机场订阅链接转换以兼容各类网络工具？"
 date: "2026-03-28 08:45:13 +08:00"
 permalink: /ruhekuaisuwanchengjichangdingyuelianjiezhuanhuanyijianronggeleiwangluogongju/

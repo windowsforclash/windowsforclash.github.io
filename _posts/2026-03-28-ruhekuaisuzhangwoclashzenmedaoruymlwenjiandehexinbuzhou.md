@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速掌握 Clash 怎么导入 yml 文件的核心步骤？"
 date: "2026-03-28 08:45:12 +08:00"
 permalink: /ruhekuaisuzhangwoclashzenmedaoruymlwenjiandehexinbuzhou/

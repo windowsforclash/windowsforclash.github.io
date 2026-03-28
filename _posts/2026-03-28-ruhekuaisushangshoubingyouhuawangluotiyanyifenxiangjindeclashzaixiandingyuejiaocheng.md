@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速上手并优化网络体验？一份详尽的Clash在线订阅教程"
 date: "2026-03-28 08:45:12 +08:00"
 permalink: /ruhekuaisushangshoubingyouhuawangluotiyanyifenxiangjindeclashzaixiandingyuejiaocheng/

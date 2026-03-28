@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何评估 clash免费订阅链接购买网站并正确配置客户端？"
 date: "2026-03-28 08:40:49 +08:00"
 permalink: /ruhepingguclashmianfeidingyuelianjiegoumaiwangzhanbingzhengquepeizhikehuduan/

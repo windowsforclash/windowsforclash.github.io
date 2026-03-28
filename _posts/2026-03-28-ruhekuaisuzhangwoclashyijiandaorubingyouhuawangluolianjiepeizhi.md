@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速掌握Clash一键导入并优化网络连接配置？"
 date: "2026-03-28 08:45:13 +08:00"
 permalink: /ruhekuaisuzhangwoclashyijiandaorubingyouhuawangluolianjiepeizhi/

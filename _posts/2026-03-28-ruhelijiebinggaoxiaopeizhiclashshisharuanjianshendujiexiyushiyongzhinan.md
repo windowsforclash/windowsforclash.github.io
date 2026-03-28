@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何理解并高效配置 Clash 是啥软件：深度解析与实用指南"
 date: "2026-03-28 08:45:13 +08:00"
 permalink: /ruhelijiebinggaoxiaopeizhiclashshisharuanjianshendujiexiyushiyongzhinan/

@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "小火箭节点免费分享与订阅链接 2026：每日更新"
 description: "获取最新小火箭节点免费分享，2026年订阅链接每日更新，以及 Clash for Windows 免费节点，助您畅游网络。"
 keywords: "shadowrocket节点免费分享, 小火箭节点订阅链接2026, clash for windows免费节点每日更新, 小火箭节点哪里买最便宜, shadowrocket节点购买推荐"

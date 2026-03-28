@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "Protecting Your Data in the Age of AI"
 description: "As AI becomes more pervasive, concerns about data privacy are growing. Learn about the risks and the steps you can take to protect your personal information."
 author: "David Lee"

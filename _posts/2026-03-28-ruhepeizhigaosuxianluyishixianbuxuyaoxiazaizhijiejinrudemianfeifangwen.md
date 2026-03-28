@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何配置高速线路以实现不需要下载直接进入的免费访问？"
 date: "2026-03-28 08:40:49 +08:00"
 permalink: /ruhepeizhigaosuxianluyishixianbuxuyaoxiazaizhijiejinrudemianfeifangwen/

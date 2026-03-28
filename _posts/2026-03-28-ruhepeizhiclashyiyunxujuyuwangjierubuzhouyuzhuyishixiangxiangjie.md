@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何配置Clash以允许局域网接入：步骤与注意事项详解"
 date: "2026-03-28 08:40:51 +08:00"
 permalink: /ruhepeizhiclashyiyunxujuyuwangjierubuzhouyuzhuyishixiangxiangjie/

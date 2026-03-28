@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何理解订阅链接的含义与高效应用？深入解析订阅链接什么意思"
 date: "2026-03-28 08:40:49 +08:00"
 permalink: /ruhelijiedingyuelianjiedehanyiyugaoxiaoyingyongshenrujiexidingyuelianjieshenmeyisi/

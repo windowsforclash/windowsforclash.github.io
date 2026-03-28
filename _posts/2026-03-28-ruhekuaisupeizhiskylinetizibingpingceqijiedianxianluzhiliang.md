@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速配置 skyline梯子，并评测其节点线路质量？"
 date: "2026-03-28 08:45:12 +08:00"
 permalink: /ruhekuaisupeizhiskylinetizibingpingceqijiedianxianluzhiliang/

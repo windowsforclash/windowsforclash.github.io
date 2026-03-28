@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何配置 Clash 局域网共享，让家庭设备都能顺畅上网？"
 date: "2026-03-28 08:40:50 +08:00"
 permalink: /ruhepeizhiclashjuyuwanggongxiangrangjiatingshebeidounengshunchangshangwang/

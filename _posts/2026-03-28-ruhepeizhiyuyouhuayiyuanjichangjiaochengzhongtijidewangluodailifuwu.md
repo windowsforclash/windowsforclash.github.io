@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何配置与优化一元机场教程中提及的网络代理服务？"
 date: "2026-03-28 08:40:50 +08:00"
 permalink: /ruhepeizhiyuyouhuayiyuanjichangjiaochengzhongtijidewangluodailifuwu/

@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何理性看待 clash一元订阅永久免费并进行有效配置？"
 date: "2026-03-28 08:40:49 +08:00"
 permalink: /ruhelixingkandaiclashyiyuandingyueyongjiumianfeibingjinxingyouxiaopeizhi/

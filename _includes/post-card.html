@@ -16,7 +16,7 @@
         {% if include.post.categories %}
         <div class="post-categories">
             {% for category in include.post.categories %}
-            <a href="{{ '/category/' | relative_url }}{{ category | slugify }}/" class="category-badge">{{ category }}</a>
+            <a href="{{ '/category/' | relative_url }}{{ category }}/" class="category-badge">{{ category }}</a>
             {% endfor %}
         </div>
         {% endif %}

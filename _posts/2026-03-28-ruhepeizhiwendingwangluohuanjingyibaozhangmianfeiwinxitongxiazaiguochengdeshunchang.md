@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何配置稳定网络环境以保障免费win系统下载过程的顺畅？"
 date: "2026-03-28 08:40:50 +08:00"
 permalink: /ruhepeizhiwendingwangluohuanjingyibaozhangmianfeiwinxitongxiazaiguochengdeshunchang/

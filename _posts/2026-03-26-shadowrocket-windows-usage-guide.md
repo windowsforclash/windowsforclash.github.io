@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "Shadowrocket Windows 使用教程：Clash for Windows 配置指南"
 description: "详细的 Shadowrocket Windows 使用教程，指导您如何在 Clash for Windows 中配置节点、导入订阅链接，轻松实现代理上网。"
 keywords: "shadowrocket windows怎么用, 小火箭windows怎么配置节点, shadowrocket节点怎么导入, clash for windows怎么添加订阅, 小火箭节点失效怎么解决"

@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何评估并选择高效稳定的好用的收费梯子服务？"
 date: "2026-03-28 08:40:51 +08:00"
 permalink: /ruhepinggubingxuanzegaoxiaowendingdehaoyongdeshoufeitizifuwu/

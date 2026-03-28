@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何理性分析“clash一元订阅永久使用”这类服务的真实价值？"
 date: "2026-03-28 08:40:50 +08:00"
 permalink: /ruhelixingfenxiclashyiyuandingyueyongjiushiyongzheleifuwudezhenshijiazhi/

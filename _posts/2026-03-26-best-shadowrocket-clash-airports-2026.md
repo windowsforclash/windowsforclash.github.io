@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "2026 小火箭节点推荐：高速稳定机场支持 Clash for Windows"
 description: "2026年最新小火箭节点推荐，精选高速稳定机场，完美支持 Clash for Windows。告别卡顿，畅享极速网络体验。"
 keywords: "小火箭节点推荐稳定高速, shadowrocket节点订阅哪个好, 小火箭机场推荐2026, clash for windows机场推荐, 支持小火箭的机场有哪些, 最稳定的小火箭节点购买"

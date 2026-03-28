@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速掌握clash使用教程手机端的详细配置方法？"
 date: "2026-03-28 08:45:12 +08:00"
 permalink: /ruhekuaisuzhangwoclashshiyongjiaochengshoujiduandexiangxipeizhifangfa/

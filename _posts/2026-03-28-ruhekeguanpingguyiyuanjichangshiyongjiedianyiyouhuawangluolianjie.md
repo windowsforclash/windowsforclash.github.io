@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何客观评估一元机场试用节点以优化网络连接？"
 date: "2026-03-28 08:45:12 +08:00"
 permalink: /ruhekeguanpingguyiyuanjichangshiyongjiedianyiyouhuawangluolianjie/

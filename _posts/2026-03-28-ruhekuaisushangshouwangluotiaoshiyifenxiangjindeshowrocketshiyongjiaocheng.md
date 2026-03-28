@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何快速上手网络调试？一份详尽的showrocket使用教程"
 date: "2026-03-28 08:45:11 +08:00"
 permalink: /ruhekuaisushangshouwangluotiaoshiyifenxiangjindeshowrocketshiyongjiaocheng/

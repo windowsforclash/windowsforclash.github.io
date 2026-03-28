@@ -1,5 +1,6 @@
 ---
 layout: post
+categories: [教程]
 title: "如何配置高速网络环境以解锁最全永久免费听书体验？"
 date: "2026-03-28 08:40:48 +08:00"
 permalink: /ruhepeizhigaosuwangluohuanjingyijiesuozuiquanyongjiumianfeitingshutiyan/

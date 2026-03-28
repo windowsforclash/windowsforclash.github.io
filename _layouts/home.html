@@ -21,7 +21,7 @@ layout: default
             <section class="latest-section">
                 <h2 class="section-title">最新文章</h2>
                 <div class="post-cards-grid">
-                    {% for post in site.posts limit:10 %}
+                    {% for post in site.posts limit:50 %}
                     <article class="post-card-item">
                         <a href="{{ post.url | relative_url }}" class="post-card-thumb-link">
                             {% if post.image %}
@@ -39,7 +39,7 @@ layout: default
                             {% if post.categories %}
                             <div class="post-card-cats">
                                 {% for cat in post.categories limit:2 %}
-                                <a href="{{ '/category/' | relative_url }}{{ cat | slugify }}/" class="cat-tag">{{ cat }}</a>
+                                <a href="{{ '/category/' | relative_url }}{{ cat }}/" class="cat-tag">{{ cat }}</a>
                                 {% endfor %}
                             </div>
                             {% endif %}
@@ -91,7 +91,7 @@ layout: default
                     {% for category in site.categories %}
                     <div class="category-card">
                         <h3 class="category-name">
-                            <a href="{{ '/category/' | relative_url }}{{ category[0] | slugify }}/">{{ category[0] }}</a>
+                            <a href="{{ '/category/' | relative_url }}{{ category[0] }}/">{{ category[0] }}</a>
                         </h3>
                         <p class="category-count">{{ category[1].size }} 篇文章</p>
                         <ul class="category-posts">
